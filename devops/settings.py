@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    'inspection',
+    'homepage'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -121,6 +123,14 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'users.backends.EmailBackend',
 )
+#配置文件
+CONFIG_URL = '/config/'
+#静态文件的路径
+CONFIGFILES_DIRS = (
+    os.path.join(BASE_DIR, "config"),#app共有的静态文件，比如：jqurey.js
+)
+
+
 #数据库配置
 DATABASES = {
     'default': {
@@ -134,4 +144,4 @@ DATABASES = {
 }
 
 LOGOUT_REDIRECT_URL = '/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/homepage/index.html'

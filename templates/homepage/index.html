@@ -7,10 +7,10 @@
     <title>Devops</title>
     <link rel="stylesheet" href="../../static/users/mobi.min.css"/>
     {#    加入bootstrap的CSS#}
-    <link href="../static/homepage/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="../static/homepage/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../../static/homepage/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../static/homepage/css/style.css" rel="stylesheet" type="text/css"/>
     {#    字体css#}
-    <link href="../static/homepage/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../static/homepage/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -18,7 +18,7 @@
 <body class="skin-black">
 {#头部的部分#}
 <header class="header">
-    <a href="/" class="logo">
+    <a href="index.html" class="logo">
         Devops
     </a>
 
@@ -47,7 +47,7 @@
             {#            头像信息#}
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="../static/homepage/image/26115.jpg" class="img-circle" alt="User Image"/>
+                    <img src="../../static/homepage/image/26115.jpg" class="img-circle" alt="User Image"/>
                 </div>
                 <div class="pull-left info">
 
@@ -55,11 +55,10 @@
                     {% if user.is_authenticated %}
                         <p>Hello, {{ user.username }}</p>
                         {#                        <a href="/"><i class="fa fa-circle text-success"></i> Online</a>#}
-                        <a href="{% url 'logout' %}?next={% url 'login' %}"><i class="fa fa-circle text-success"></i>
-                            注销登录</a>
                         <a href="{% url 'password_change' %}?next={{ request.path }}"><i
                                 class="fa fa-circle text-success"></i> 修改密码</a>
-
+                        <a href="{% url 'logout' %}?next={% url 'homepage:index' %}"><i class="fa fa-circle text-success"></i>
+                            注销登录</a>
                     {% else %}
                         <p>你还没有登录，请</p>
 
@@ -81,7 +80,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="inspection/inspection.html">
+                    <a href="../inspection/inspection.html">
                         <i class="fa fa-gavel"></i> <span>巡检</span>
                     </a>
                 </li>
@@ -160,12 +159,12 @@
 {#结尾#}
 
 <footer class="footer navbar-fixed-bottom ">
-{#<div class="footer-main">#}
+    {#<div class="footer-main">#}
     <div class="container">
-    <a>公司名称，年份 </a>
-{#</div>#}
+        <a>公司名称，年份 </a>
+        {#</div>#}
     </div>
-    </footer>
+</footer>
 
 </body>
 
