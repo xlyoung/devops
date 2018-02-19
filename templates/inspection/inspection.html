@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -71,7 +71,8 @@
                         {#                        <a href="/"><i class="fa fa-circle text-success"></i> Online</a>#}
                         <a href="{% url 'password_change' %}?next={{ request.path }}"><i
                                 class="fa fa-circle text-success"></i> 修改密码</a>
-                        <a href="{% url 'logout' %}?next={% url 'homepage:index' %}"><i class="fa fa-circle text-success"></i>
+                        <a href="{% url 'logout' %}?next={% url 'homepage:index' %}"><i
+                                class="fa fa-circle text-success"></i>
                             注销登录</a>
                     {% else %}
                         <p>你还没有登录，请</p>
@@ -122,22 +123,90 @@
 {#中间主题内容#}
 <aside class="right-side">
     <div class="pull-left">
-        <div class="container">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">IP选择</h3>
-                </div>
-                <div class="panel-body">
-
-                    <div id="pickList"></div>
-
-
-                    <button class="btn btn-primary" id="getSelected">Get Selected</button>
+        {#        选择框#}
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">IP选择</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="pickList"></div>
+                            <button class="btn btn-primary" id="getSelected">巡检</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+        {#        程序列表#}
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">程序列表</h3>
+                        </div>
+                        <div class="panel-body table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>程序</th>
+                                    <th>用户</th>
+                                    <!-- <th>Client</th> -->
+                                    <th>修改时间</th>
+                                    <!-- <th>Price</th> -->
+                                    <th>状态</th>
+                                    <th>日志</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Facebook</td>
+                                    <td>Mark</td>
+                                    <!-- <td>Steve</td> -->
+                                    <td>10/10/2014</td>
+                                    <!-- <td>$1500</td> -->
+                                    <td><span class="label label-danger">in progress</span></td>
+                                    <td><span class="badge badge-info">50%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Twitter</td>
+                                    <td>Evan</td>
+                                    <!-- <td>Darren</td> -->
+                                    <td>10/8/2014</td>
+                                    <!-- <td>$1500</td> -->
+                                    <td><span class="label label-success">completed</span></td>
+                                    <td><span class="badge badge-success">100%</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </section>
+                    </div>
+                </div>
+
+
+                {#结尾#}
+            </div>
+        </div>
+
+
+{#        隐藏列表#}
+        <script>
+            $("table tbody").hide();
+        </script>
+
+
+    </div>
 </aside>
+
+
 
 
 {#结尾#}
@@ -148,6 +217,8 @@
         {#</div>#}
     </div>
 </footer>
+
+</body>
 
 
 <script>
@@ -225,9 +296,7 @@
             removeAll: 'Remove All'
         };
     }(jQuery));
-    {#var val = {{ IpList|safe }};#}
-    var val = {01: {id: 01, text: '10.249.242.26'}, 02: {id: 02, text: '10.249.242.27'}}
-
+    var val = {{ IpList|safe }};
 
     var pick = $("#pickList").pickList({
         data: val
@@ -238,14 +307,14 @@
             type: "POST",
             url: "/inspection/select",
             data: {ipList: JSON.stringify(pick.getValues())},
-            success: function (response, status, xhr) {
-                $(".box").html(response);
+            success: function (response) {
+                {#显示列表#}
+                $("table tbody").show();
+                {#alert({{ TomcatPath|safe }})#}
             }
         })
         {#console.log(JSON.stringify(pick.getValues()));#}
     });
 
-
 </script>
-</body>
 </html>
