@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'users',
     'inspection',
-    'homepage'
+    'homepage',
+    'ansible_module'
 )
 
 MIDDLEWARE_CLASSES = (
