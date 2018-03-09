@@ -2,15 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="423ad379-33bc-4928-8c52-97541d1279f1" name="默认的" comment="修复了1、主页乱跳&#10;2、增加了ajax">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_module/urls.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/inspection/exec_ssh.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/ansible/ansible.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_module/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_module/admin.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_module/migrations/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_module/models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_module/tests.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_module/views.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa-0.13.dist-info/DESCRIPTION.rst" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa-0.13.dist-info/INSTALLER" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa-0.13.dist-info/METADATA" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa-0.13.dist-info/RECORD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa-0.13.dist-info/WHEEL" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa-0.13.dist-info/metadata.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa-0.13.dist-info/top_level.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/_version.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/curves.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/der.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/ecdsa.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/ellipticcurve.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/keys.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/numbertheory.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/rfc6979.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/six.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/test_pyecdsa.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/ecdsa/util.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko-1.15.2.dist-info/DESCRIPTION.rst" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko-1.15.2.dist-info/INSTALLER" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko-1.15.2.dist-info/METADATA" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko-1.15.2.dist-info/RECORD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko-1.15.2.dist-info/WHEEL" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko-1.15.2.dist-info/metadata.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko-1.15.2.dist-info/top_level.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/_version.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/_winapi.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/agent.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/auth_handler.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/ber.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/buffered_pipe.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/channel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/client.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/common.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/compress.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/config.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/dsskey.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/ecdsakey.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/file.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/hostkeys.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/kex_gex.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/kex_group1.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/kex_group14.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/kex_gss.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/message.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/packet.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/pipe.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/pkey.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/primes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/proxy.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/py3compat.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/resource.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/rsakey.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/server.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/sftp.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/sftp_attr.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/sftp_client.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/sftp_file.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/sftp_handle.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/sftp_server.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/sftp_si.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/ssh_exception.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/ssh_gss.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/transport.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/util.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/Lib/site-packages/paramiko/win_pageant.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/env/pip-selfcheck.json" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/devops/urls.py" afterPath="$PROJECT_DIR$/devops/urls.py" />
-      <change beforePath="$PROJECT_DIR$/inspection/urls.py" afterPath="$PROJECT_DIR$/inspection/urls.py" />
-      <change beforePath="$PROJECT_DIR$/inspection/views.py" afterPath="$PROJECT_DIR$/inspection/views.py" />
-      <change beforePath="$PROJECT_DIR$/templates/homepage/index.html" afterPath="$PROJECT_DIR$/templates/homepage/index.html" />
-      <change beforePath="$PROJECT_DIR$/templates/inspection/inspection.html" afterPath="$PROJECT_DIR$/templates/inspection/inspection.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -107,7 +174,7 @@
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -182,10 +249,21 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="PUSH_TAGS">
-      <GitPushTagMode />
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
     </option>
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
+    <push-targets>
+      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="master" />
+    </push-targets>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -382,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520564340058</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修复了1、主页乱跳&#10;2、增加了ajax">
+      <created>1520567845558</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1520567845558</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -458,9 +543,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="前端框架制定" />
-    <MESSAGE value="修复了1、主页乱跳&#10;2、增加了ajax" />
     <MESSAGE value="增加了requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了requirements.txt" />
+    <MESSAGE value="修复了1、主页乱跳&#10;2、增加了ajax" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了1、主页乱跳&#10;2、增加了ajax" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -830,7 +915,7 @@
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
