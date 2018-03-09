@@ -12,5 +12,4 @@ urlpatterns = [
     url(r'^users/', include('django.contrib.auth.urls')),
     url(r'^homepage/', include('homepage.urls')),
     url(r'^inspection/', include('inspection.urls')),
-    url(r'^ansible/', include('ansible_module.urls')),
     ]
