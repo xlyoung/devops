@@ -10,6 +10,6 @@ urlpatterns = [
     url(r'^users/', include('users.urls' ,namespace="users")),
     # 将 auth 应用中的 urls 模块包含进来(登陆、注销)
     url(r'^users/', include('django.contrib.auth.urls')),
-    url(r'^homepage/', include('homepage.urls')),
-    url(r'^inspection/', include('inspection.urls')),
+    url(r'^homepage/', include('homepage.urls' ,namespace="homepage")),
+    url(r'^inspection/', include('inspection.urls' , namespace="inspection")),
     ]
