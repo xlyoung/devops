@@ -106,7 +106,7 @@
                 </li>
 
                 <li>
-                    <a href="simple.html">
+                    <a href="../ansible/ansible.html">
                         <i class="fa fa-glass"></i> <span>ansible</span>
                     </a>
                 </li>
@@ -164,25 +164,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Facebook</td>
-                                    <td>Mark</td>
-                                    <!-- <td>Steve</td> -->
-                                    <td>10/10/2014</td>
-                                    <!-- <td>$1500</td> -->
-                                    <td><span class="label label-danger">in progress</span></td>
-                                    <td><span class="badge badge-info">50%</span></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Twitter</td>
-                                    <td>Evan</td>
-                                    <!-- <td>Darren</td> -->
-                                    <td>10/8/2014</td>
-                                    <!-- <td>$1500</td> -->
-                                    <td><span class="label label-success">completed</span></td>
-                                    <td><span class="badge badge-success">100%</span></td>
+                             {% for i in tomcat_paths %}
+                                     <td> {{i.tomcat_path}} </td>
+                             {% endfor %}
                                 </tr>
                                 </tbody>
                             </table>
@@ -197,7 +181,7 @@
         </div>
 
 
-{#        隐藏列表#}
+        {#        隐藏列表#}
         <script>
             $("table tbody").hide();
         </script>
@@ -205,8 +189,6 @@
 
     </div>
 </aside>
-
-
 
 
 {#结尾#}
@@ -310,7 +292,8 @@
             success: function (response) {
                 {#显示列表#}
                 $("table tbody").show();
-                {#alert({{ TomcatPath|safe }})#}
+                console.log(JSON.stringify(context));
+                alert(context)
             }
         })
         {#console.log(JSON.stringify(pick.getValues()));#}
