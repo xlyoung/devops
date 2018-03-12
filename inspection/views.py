@@ -8,9 +8,9 @@ from inspection.exec_ssh import  SSHConnection
 import re
 
 
-def inspection(request):
+def index(request):
     ip_list = {01:{"id":01,"text":'39.108.182.47'},02:{"id":02,"text":'10.249.242.27'}}
-    return render(request, 'inspection/inspection.html', {'IpList': json.dumps(ip_list)})
+    return render(request, 'inspection/index.html', {'IpList': json.dumps(ip_list)})
 
 
 @csrf_exempt
@@ -32,7 +32,7 @@ def get_ip(request):
         # print tomcatPath
         # return HttpResponse(json.dumps(t.run()))
         # context = {'tomcat_paths': [{'tomcat_path': 1}, {'tomcat_path': 2}, {'tomcat_path': 3}]}
-        return render(request, 'inspection/inspection.html')
+        return render(request, 'inspection/index.html')
     else:
         print 2222
         return HttpResponse("hahahahah")

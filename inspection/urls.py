@@ -5,5 +5,5 @@ app_name = 'inspection'
 
 urlpatterns = [
     url(r'select', views.get_ip, name='select'),
-    url(r'$', views.inspection, name='inspection'),
+    url(r'$', views.index, name='index'),
 ]
