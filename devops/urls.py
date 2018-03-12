@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^users/', include('django.contrib.auth.urls')),
     url(r'^homepage/', include('homepage.urls' ,namespace="homepage")),
     url(r'^inspection/', include('inspection.urls' , namespace="inspection")),
+    url(r'^cmdb/', include('cmdb.urls' , namespace="cmdb")),
     ]
