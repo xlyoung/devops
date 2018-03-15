@@ -1,8 +1,10 @@
 #coding:utf-8
 from django.shortcuts import render,HttpResponse,redirect
+from django.template import Template, Context
 from exec_mysql import ExecMysql
 from form import IpList
 import uuid
+from cmdb import models
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -30,9 +32,10 @@ def config_update(request):
 
 def add_host(request):
     form = IpList()
-    # print form
-    return  render(request,'cmdb/add_host.html',{"form":form})
+    q_data = models.ip_list.objects.all().all()
 
+    print q_data
+    return  render(request,'cmdb/add_host.html',{"form":form,"q_data":q_data})
 
 def add_config(request):
     if request.method == 'POST':
@@ -61,9 +64,5 @@ def add_config(request):
             db.close()
             return render(request,'cmdb/add_host.html',{"queryip":query_result_all})
 
-
-
 def query_ip(request):
     pass
-
-

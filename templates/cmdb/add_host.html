@@ -149,22 +149,22 @@
                         <div class="form-group col-md-12">
                             <label class="col-sm-2 control-label">设备类型</label>
                             <div class="col-sm-4">
-{#                                <select class="form-control" name="a_product">#}
-{#                                    {% for i in form.product %}#}
-{#                                        {{ i }}#}
-{#                                    {% endfor %}#}
-{#                                </select>#}
+                                {#                                <select class="form-control" name="a_product">#}
+                                {#                                    {% for i in form.product %}#}
+                                {#                                        {{ i }}#}
+                                {#                                    {% endfor %}#}
+                                {#                                </select>#}
                                 {{ form.product }}
                             </div>
 
 
                             <label class="col-sm-2 control-label">系统类型</label>
                             <div class="col-sm-4">
-{#                                <select class="form-control" name="a_system">#}
-{#                                      {% for i in form.system %}#}
-{#                                        {{ i }}#}
-{#                                    {% endfor %}#}
-{#                                </select>#}
+                                {#                                <select class="form-control" name="a_system">#}
+                                {#                                      {% for i in form.system %}#}
+                                {#                                        {{ i }}#}
+                                {#                                    {% endfor %}#}
+                                {#                                </select>#}
                                 {{ form.system }}
                             </div>
                         </div>
@@ -174,16 +174,16 @@
                         <div class="form-group col-md-12 ">
                             <label for="inputgsmc" class="col-sm-2 control-label">服务器名称</label>
                             <div class="col-sm-4">
-{#                                <input type="text" name="a_hostname" class="form-control" id="inputgsmc"#}
-{#                                       placeholder="cs-mogodb">#}
+                                {#                                <input type="text" name="a_hostname" class="form-control" id="inputgsmc"#}
+                                {#                                       placeholder="cs-mogodb">#}
                                 {{ form.hostname }}
                             </div>
 
                             {#                <div class="form-group col-md-12">#}
                             <label for="inputgsmc" class="col-sm-2 control-label">IP</label>
                             <div class="col-sm-4">
-{#                                <input type="name" name="a_ip" id="name" class="form-control" id="inputgsmc"#}
-{#                                       placeholder="10.249.242.100">#}
+                                {#                                <input type="name" name="a_ip" id="name" class="form-control" id="inputgsmc"#}
+                                {#                                       placeholder="10.249.242.100">#}
                                 {{ form.ip }}
                             </div>
                         </div>
@@ -193,9 +193,9 @@
                     <div class="row">
                         <div class="form-group col-md-12 ">
                             <label for="inputgsmc" class="col-sm-2 control-label">服务器组别</label>
-                            <div class="col-sm-4" >
-{#                                <input type="text" name="a_group" class="form-control" id="inputgsmc"#}
-{#                                       placeholder="cs">#}
+                            <div class="col-sm-4">
+                                {#                                <input type="text" name="a_group" class="form-control" id="inputgsmc"#}
+                                {#                                       placeholder="cs">#}
                                 {{ form.group }}
                             </div>
 
@@ -214,9 +214,33 @@
                     </div>
                 </form>
 
-
-
-            </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container ">
+                <table class="table table-bordered "  >
+                <tr>
+                    <td>id</td>
+                    <td>ip地址</td>
+                    <td>系统</td>
+                    <td>服务器组别</td>
+                    <td>服务器名称</td>
+                    <td>服务器类型</td>
+                </tr>
+                    {% for item in q_data %}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.ip }}</td>
+                            <td>{{ item.system }}</td>
+                            <td>{{ item.groupname }}</td>
+                            <td>{{ item.hostname }}</td>
+                            <td>{{ item.product }}</td>
+                            {#            <td>{{ item.group2.caption }}</td>#}
+                        </tr>
+                    {% endfor %}
+                </table>
+                </div>
+</div>
+            </divclo>
         </div>
 
 </aside>
