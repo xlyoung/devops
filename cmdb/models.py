@@ -23,5 +23,7 @@ class ip_list(models.Model):
     hostname = models.CharField(max_length=100)
     group = models.CharField(max_length=100)
     ip = models.GenericIPAddressField(protocol="ipv4", null=True, blank=True)
+    system = models.CharField(max_length=100)
+    product = models.CharField(max_length=100)
     class Meta:
         db_table = "iplist"

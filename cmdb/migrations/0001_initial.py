@@ -18,6 +18,8 @@ class Migration(migrations.Migration):
                 ('hostname', models.CharField(max_length=100)),
                 ('group', models.CharField(max_length=100)),
                 ('ip', models.GenericIPAddressField(null=True, protocol=b'ipv4', blank=True)),
+                ('system', models.CharField(max_length=100)),
+                ('product', models.CharField(max_length=100)),
             ],
             options={
                 'db_table': 'iplist',

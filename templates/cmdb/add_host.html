@@ -15,7 +15,7 @@
     <script src="../../static/inspection/js/jquery-3.3.1.js" type="text/javascript"></script>
 
 
-{#    主动点击按钮#}
+    {#    主动点击按钮#}
     <script>
         $(function () {
             $(".faq-tabbable").find("li").each(function () {
@@ -28,8 +28,6 @@
             });
         })
     </script>
-
-
 
 
 </head>
@@ -106,16 +104,16 @@
                     </a>
                 </li>
 
-                <li class="active">
+                <li>
 
                     <a href={% url 'cmdb:index' %}>
                         <i class="fa fa-globe"></i> <span>CMDB</span>
                     </a>
                     <ul class="sidebar-menu">
-                        <li>
-                    <a href={% url 'cmdb:add_host' %}>
-                          <i class="fa fa-gbp text-right"></i> <span>增加host</span>
-                    </a>
+                        <li class="active">
+                            <a href={% url 'cmdb:add_host' %}>
+                                <i class="fa fa-gbp text-right"></i> <span>增加host</span>
+                            </a>
                         </li>
                     </ul>
 
@@ -142,28 +140,29 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="container ">
-                    <h3 class="text-left">服务器查询</h3>
+                    <h3 class="text-left">服务器增加</h3>
                 </div>
-                <form name="select_server" method="post" enctype="multipart/form-data" action={% url 'cmdb:select' %}>
+                <form name="select_server" method="POST" enctype="multipart/form-data"
+                      action={% url 'cmdb:config' %}>
+                    {% csrf_token %}
                     <div class="row">
                         <div class="form-group col-md-12">
-
                             <label class="col-sm-2 control-label">设备类型</label>
                             <div class="col-sm-4">
-                                <select class="form-control" name="product">
-                                    <option value="服务器">服务器</option>
-                                    <option value="交换机">交换机</option>
-                                    <option value="路由器">路由器</option>
-                                    <option value="虚拟机">虚拟机</option>
+                                <select class="form-control" name="a_product">
+                                    {% for i in form.product %}
+                                        {{ i }}
+                                    {% endfor %}
                                 </select>
                             </div>
 
 
                             <label class="col-sm-2 control-label">系统类型</label>
                             <div class="col-sm-4">
-                                <select class="form-control" name="company">
-                                    <option value="linux">linux</option>
-                                    <option value="windows">windows</option>
+                                <select class="form-control" name="a_system">
+                                      {% for i in form.system %}
+                                        {{ i }}
+                                    {% endfor %}
                                 </select>
                             </div>
                         </div>
@@ -173,22 +172,36 @@
                         <div class="form-group col-md-12 ">
                             <label for="inputgsmc" class="col-sm-2 control-label">服务器名称</label>
                             <div class="col-sm-4">
-                                <input type="text" name="gsname" class="form-control" id="inputgsmc"
+                                <input type="text" name="a_hostname" class="form-control" id="inputgsmc"
                                        placeholder="cs-mogodb">
                             </div>
 
                             {#                <div class="form-group col-md-12">#}
                             <label for="inputgsmc" class="col-sm-2 control-label">IP</label>
                             <div class="col-sm-4">
-                                <input type="name" name="name" id="name" class="form-control" id="inputgsmc"
+                                <input type="name" name="a_ip" id="name" class="form-control" id="inputgsmc"
                                        placeholder="10.249.242.100">
                             </div>
                         </div>
                     </div>
 
+
+                    <div class="row">
+                        <div class="form-group col-md-12 ">
+                            <label for="inputgsmc" class="col-sm-2 control-label">服务器组别</label>
+                            <div class="col-sm-4">
+                                <input type="text" name="a_group" class="form-control" id="inputgsmc"
+                                       placeholder="cs">
+                            </div>
+
+                            {#                <div class="form-group col-md-12">#}
+                        </div>
+                    </div>
+
+
                     <div class="form-group">
                         <div class="col-sm-6">
-                            <button type="submit" name="submit" class="btn btn-danger pull-right tb">查询</button>
+                            <button type="submit" name="submit" class="btn btn-danger pull-right tb">增加</button>
                         </div>
                         <div class="col-sm-6">
                             <button name="reset" type="reset" class="btn btn-default pull-left">重置</button>
