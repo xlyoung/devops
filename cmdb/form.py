@@ -2,16 +2,16 @@
 
 from django.forms import Form
 from django.forms import fields
+from django.forms import widgets
 from cmdb import models
 
 class IpList(Form,):
     # id = fields.UUIDField(required=True)
     hostname = fields.CharField(required=True)
     ip = fields.GenericIPAddressField(required=True)
-    product = fields.ChoiceField(choices=[(1,'服务器'),(2,'交换机'),(3,'路由器')])
+    product = fields.ChoiceField(choices=[('service','服务器'),('switch','交换机'),('router','路由器')],widget=widgets.Select)
     group = fields.CharField(required=True)
-    system = fields.ChoiceField(choices=[(1,'linux'),(2,'windows')])
-
+    system = fields.ChoiceField(choices=[('linux','linux'),('windows','windows')],widget=widgets.Select)
 
 # class QueryIp(IpList):
 #     q_id  = models.ip_list.id()

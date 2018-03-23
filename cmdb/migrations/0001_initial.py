@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import uuid
 
 
 class Migration(migrations.Migration):
@@ -14,7 +13,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='ip_list',
             fields=[
-                ('id', models.UUIDField(auto_created=True, primary_key=True, default=uuid.uuid1, serialize=False, editable=False)),
+                ('uuid', models.CharField(max_length=100, editable=False)),
+                ('id', models.AutoField(serialize=False, verbose_name=b'ID', primary_key=True)),
                 ('hostname', models.CharField(max_length=100)),
                 ('groupname', models.CharField(max_length=100)),
                 ('ip', models.GenericIPAddressField(null=True, protocol=b'ipv4', blank=True)),

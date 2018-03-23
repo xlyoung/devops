@@ -19,7 +19,8 @@ class UUIDTools(object):
 
 
 class ip_list(models.Model):
-    id = models.CharField(primary_key=True,editable=False,max_length=100)
+    uuid = models.CharField(editable=False,max_length=100)
+    id = models.AutoField('ID', primary_key=True)
     hostname = models.CharField(max_length=100)
     groupname = models.CharField(max_length=100)
     ip = models.GenericIPAddressField(protocol="ipv4", null=True, blank=True)

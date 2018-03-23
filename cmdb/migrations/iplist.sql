@@ -1,0 +1,7 @@
+INSERT INTO `iplist`(`uuid`, `id`, `hostname`, `groupname`, `ip`, `system`, `product`) VALUES ('617921fd-06b9-4d93-80cd-722014c26966', 1, 'biap-zh-cs-web1', '测试', '10.249.242.80', 'linux', 'service');
+INSERT INTO `iplist`(`uuid`, `id`, `hostname`, `groupname`, `ip`, `system`, `product`) VALUES ('5651e1db-13fa-486d-b4e5-f07c99cb31fe', 2, 'biap-zh-cs-web2', '测试', '10.249.242.81', 'linux', 'service');
+INSERT INTO `iplist`(`uuid`, `id`, `hostname`, `groupname`, `ip`, `system`, `product`) VALUES ('58f5bce6-1925-4964-abc2-fb418520fd12', 3, 'biap-zh-cs-interface2', '测试', '10.249.242.83', 'linux', 'service');
+INSERT INTO `iplist`(`uuid`, `id`, `hostname`, `groupname`, `ip`, `system`, `product`) VALUES ('81b49867-4e3e-4d26-8031-6f6e89838ab4', 4, 'biap-zh-cs-backstage1', '测试', '10.249.242.84', 'linux', 'service');
+INSERT INTO `iplist`(`uuid`, `id`, `hostname`, `groupname`, `ip`, `system`, `product`) VALUES ('5eef090f-2675-43e3-b2c7-80d193aee224', 5, 'biap-zh-cs-backstage2', '测试', '10.249.242.85', 'linux', 'service');
+INSERT INTO `iplist`(`uuid`, `id`, `hostname`, `groupname`, `ip`, `system`, `product`) VALUES ('66a6e97b-5bd7-4d99-ada1-22cd177400b9', 6, 'biap-zh-cs-mongodb', '测试', '10.249.242.86', 'linux', 'service');
+INSERT INTO `iplist`(`uuid`, `id`, `hostname`, `groupname`, `ip`, `system`, `product`) VALUES ('5be85c84-d9e6-4641-ae81-0c76d8844e39', 7, 'biap-zh-cs-nginx', '测试', '10.249.242.87', 'linux', 'service');
