@@ -30,6 +30,7 @@ def config_update(request):
     return render(request,'cmdb/config_update.html')
 
 
+
 def add_host(request):
     form = IpList()
     q_data = models.ip_list.objects.all().all()
