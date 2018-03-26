@@ -66,3 +66,11 @@ def add_config(request):
 
 def query_ip(request):
     pass
+
+def query_resource(request):
+    print models.ip_list.objects.all().values('ip')
+    for ip in models.ip_list.objects.all().values('ip'):
+        print ip
+    return render(request,'cmdb/index.html')
+    # for ip in models.ip_list.ip:
+    #     print ip
