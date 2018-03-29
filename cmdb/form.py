@@ -11,6 +11,8 @@ class IpList(Form,):
     ip = fields.GenericIPAddressField(required=True)
     product = fields.ChoiceField(choices=[('service','服务器'),('switch','交换机'),('router','路由器')],widget=widgets.Select)
     group = fields.CharField(required=True)
+    user = fields.CharField(required=True)
+    passwd = fields.CharField(required=True)
     system = fields.ChoiceField(choices=[('linux','linux'),('windows','windows')],widget=widgets.Select)
 
 # class QueryIp(IpList):

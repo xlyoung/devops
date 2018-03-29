@@ -8,6 +8,11 @@ from cmdb import models
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
+#ansible
+# from ansible.parsing.dataloader import DataLoader
+# from ansible.inventory.manager import InventoryManager
+
+
 dbconfig = {'host': '127.0.0.1',
             'port': 3306,
             'user': 'root',
@@ -68,9 +73,8 @@ def query_ip(request):
     pass
 
 def query_resource(request):
-    print models.ip_list.objects.all().values('ip')
-    for ip in models.ip_list.objects.all().values('ip'):
-        print ip
-    return render(request,'cmdb/index.html')
-    # for ip in models.ip_list.ip:
+    # print models.ip_list.objects.all().values('ip')
+    # for ip in models.ip_list.objects.all().values('ip'):
     #     print ip
+
+    return render(request,'cmdb/index.html')

@@ -190,6 +190,26 @@
                     </div>
 
 
+                     <div class="row">
+                        <div class="form-group col-md-12 ">
+                            <label for="inputgsmc" class="col-sm-2 control-label">服务器账号</label>
+                            <div class="col-sm-4">
+                                {#                                <input type="text" name="a_hostname" class="form-control" id="inputgsmc"#}
+                                {#                                       placeholder="cs-mogodb">#}
+                                {{ form.user }}
+                            </div>
+
+                            {#                <div class="form-group col-md-12">#}
+                            <label for="inputgsmc" class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-4">
+                                {#                                <input type="name" name="a_ip" id="name" class="form-control" id="inputgsmc"#}
+                                {#                                       placeholder="10.249.242.100">#}
+                                {{ form.passwd }}
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="row">
                         <div class="form-group col-md-12 ">
                             <label for="inputgsmc" class="col-sm-2 control-label">服务器组别</label>
@@ -225,6 +245,8 @@
                     <td>服务器组别</td>
                     <td>服务器名称</td>
                     <td>服务器类型</td>
+                    <td>账号</td>
+                    <td>密码</td>
                 </tr>
                     {% for item in q_data %}
                         <tr>
@@ -234,6 +256,8 @@
                             <td>{{ item.groupname }}</td>
                             <td>{{ item.hostname }}</td>
                             <td>{{ item.product }}</td>
+                            <td>{{ item.user }}</td>
+                            <td>{{ item.passwd }}</td>
                             {#            <td>{{ item.group2.caption }}</td>#}
                         </tr>
                     {% endfor %}
